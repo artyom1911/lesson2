@@ -1,16 +1,25 @@
-# This is a sample Python script.
+'''Задача 1. Иван Васильевич пришел на рынок и решил купить два арбуза:
+один для себя, а другой для тещи. Понятно, что для себя нужно
+выбрать арбуз потяжелей, а для тещи полегче. Но вот незадача:
+рбузов слишком много и он не знает как же выбрать самый легкий и
+самый тяжелый арбуз? Помогите ему!
+Пользователь вводит одно число N – количество арбузов. Вторая строка содержит N
+чисел, записанных на новой строчке каждое. Здесь каждое число – это масса соответствующего арбуза
+Input: 5 -> 5 1 6 5 9
+Output: 1 9 '''
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+a = int(input("Введите колличество арбузов ="))
 
+c = 0
+d = 0
+for i in range(a):
+    wtrmln = int(input('Введите массу арбуза = '))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    if wtrmln > c :
+        c = wtrmln
 
+    if wtrmln < d or d == 0 :
+        d = wtrmln
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Для себя", c)
+print("Для для тещи", d)
